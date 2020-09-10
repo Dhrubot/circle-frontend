@@ -6,8 +6,8 @@ import Logout from './Logout'
 const NavBar = (props) => {
 
     return (
-      <div className='nav'>
-            {props.currentUser ? <strong>Welcome, {props.currentUser.username}!</strong>  : ''}
+      <div className='NavBar'>
+            { props.currentUser ? <strong>Welcome, {props.currentUser.username}!</strong>  : ''}
             { props.currentUser ? <Logout/> : <Login/> }
       </div>
     )
