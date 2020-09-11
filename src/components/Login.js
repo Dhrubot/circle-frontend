@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { updateLoginForm } from '../actions/loginForm'
 import { login } from '../actions/currentUser'
+import { Link } from 'react-router-dom'
 
 const Login = ({ loginFormData, updateLoginForm, login }) => {
 
@@ -19,15 +20,18 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
         login(loginFormData)
     }
     return (
-        <form onSubmit={ handleSubmit }>
-            <input type='text' name='username' 
-            placeholder='Username' value={loginFormData.username} 
-            onChange={ handleInputChange }/>
-            <input type='password' name='password' 
-            placeholder='Password' value={loginFormData.password}
-            onChange={ handleInputChange }/>
-            <input type='submit' value='Login' />
-        </form>
+        <div>
+            <form onSubmit={ handleSubmit }>
+                <input type='text' name='username' 
+                placeholder='Username' value={loginFormData.username} 
+                onChange={ handleInputChange }/>
+                <input type='password' name='password' 
+                placeholder='Password' value={loginFormData.password}
+                onChange={ handleInputChange }/>
+                <input type='submit' value='Login' />
+            </form>
+            <p> Don't have an account? <Link to='/signup'>Sign Up</Link></p>
+        </div>
     )
 }
 
