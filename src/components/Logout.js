@@ -1,16 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { logout } from '../actions/currentUser'
+import Button from 'react-bootstrap/Button'
+import { withRouter } from "react-router"
 
-const Logout = ({ logout }) => {
+const Logout = ({ logout, history }) => {
 
+    const handleOnCLick = () => {
+        logout(history)
+    }
     return (
-        <form onSubmit={logout}>
-            <input type='submit' value='Logout' />
-        </form>
+
+        <Button variant='danger' size='sm' onClick={ handleOnCLick }>
+            Logout
+        </Button>
     )
 }
 
 
 
-export default connect(null, { logout })(Logout)
+export default withRouter(connect(null, { logout })(Logout))
