@@ -5,7 +5,7 @@ export const updateNewPostForm = formData => {
     }
 }
 
-export const resetSignupForm = () => {
+export const resetNewPostForm = () => {
     return {
         type: 'RESET_NEW_POST_FORM'
     }
