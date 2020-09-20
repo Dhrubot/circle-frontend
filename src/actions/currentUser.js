@@ -1,4 +1,5 @@
 import { resetSignupForm } from "./signupForm"
+import { getUserPosts, clearUserPosts } from './userPosts'
 
 
 export const setCurrentUser = user => {
@@ -14,7 +15,7 @@ export const clearCurrentUser = () => {
     }
 }
 
-export const login = credentials => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch('http://localhost:3001/api/v1/login', {
             credentials: 'include',
@@ -30,6 +31,8 @@ export const login = credentials => {
                             alert(user.error)
                         } else {
                             dispatch(setCurrentUser(user))
+                            dispatch(getUserPosts(user.id))
+                            history.push('/')
                         }
                     })
                     .catch(console.log)
@@ -62,13 +65,16 @@ export const signup = formData => {
     }
 }
 
-export const logout = () => {
+export const logout = (history) => {
     return dispatch => {
-        dispatch(clearCurrentUser)
+        dispatch(clearCurrentUser())
+        dispatch(clearUserPosts())
+        history.push('/')
         return fetch('http://localhost:3001/api/v1/logout', {
             credentials: 'include',
             method: 'DELETE'
         })
+        .then()
     }
 }
 
@@ -87,6 +93,7 @@ export const getCurrentUser = () => {
                             alert(user.error)
                         } else {
                             dispatch(setCurrentUser(user))
+                            dispatch(getUserPosts(user.id))
                         }
                     })
                     .catch(console.log)
