@@ -9,7 +9,7 @@ Circle is a social networking platform written in Ruby on Rails, React and Redux
 npm install
 npm start
 ```
-
+With the backend serve running, the apllication should now be running in your default browser in port 3000.
 
 I hope you enjoy the application. Any feedback will be appreciated. 
 
