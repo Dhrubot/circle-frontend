@@ -28,7 +28,7 @@ class UserFollowingPost extends React.Component {
                                 <Button variant="outline-primary" size="sm" onClick={() => {
                                     this.props.createNewLike(post.id, this.props.userId, this.props.history)
                                 }}>
-                                    Like this post
+                                    {post.likes.find(like => like.liker.id === this.props.userId) ? 'Liked' : 'Like'}
                                 </Button>
                             </p>
                             <strong style={{ marginRight: '5px' }}>{post && post.likes.length}</strong>Likes

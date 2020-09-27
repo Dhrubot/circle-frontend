@@ -28,9 +28,12 @@ const Home = ({ userFollowingsPosts, history, currentUser }) => {
                 </Card.Body>
             </Card>
 
+    // Tried out a sorting function to sort the homepage posts by most likes
+    // const userFollowingPostSorted = userFollowingsPosts.sort((a, b) => (b.likes.length - a.likes.length))
 
     const postCards = userFollowingsPosts.length > 0 ?
-    
+        
+
         userFollowingsPosts.map((p, index) => {
 
             const handleOnClick = e => {
