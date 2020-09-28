@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACI,kBACJ,CAEA,oBACI,gBAAiB,CACjB,kBAAmB,CACnB,eAAe,CACf,gCACJ","file":"main.e1fb3e6c.chunk.css","sourcesContent":["body {\n    background: #ecf2f9;\n}\n\n.comment-list-group {\n    max-height: 200px;\n    margin-bottom: 10px;\n    overflow:scroll;\n    -webkit-overflow-scrolling: touch;\n}\n"]}
