@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "08e2b0cac06a30e58e7146236b91e91e",
+    "revision": "6e17fc39633ff0c65a60ba1c71bc4afa",
     "url": "/circle-frontend/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/circle-frontend/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "de133ff8ed93903623c2",
+    "revision": "3eefcd3c790a7be35ab0",
     "url": "/circle-frontend/static/css/main.e1fb3e6c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/circle-frontend/static/js/2.4951d3e0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de133ff8ed93903623c2",
-    "url": "/circle-frontend/static/js/main.69d5a710.chunk.js"
+    "revision": "3eefcd3c790a7be35ab0",
+    "url": "/circle-frontend/static/js/main.120c6c42.chunk.js"
   },
   {
     "revision": "3102dfd510c569745975",
