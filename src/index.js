@@ -9,7 +9,7 @@ import './index.css'
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router basename='/circle-frontend'>
+    <Router basename={process.env.PUBLIC_URL}>
       <App />
     </Router>
   </Provider>,
