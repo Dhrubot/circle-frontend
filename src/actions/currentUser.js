@@ -1,6 +1,8 @@
 import { resetSignupForm } from "./signupForm"
 import { getUserPosts, clearUserPosts } from './userPosts'
 
+export const BASE_URL = 'http://localhost:3001//api/v1'
+
 
 export const setCurrentUser = user => {
     return {
@@ -17,7 +19,7 @@ export const clearCurrentUser = () => {
 
 export const login = (credentials, history) => {
     return dispatch => {
-        return fetch('http://localhost:3001/api/v1/login', {
+        return fetch(`${BASE_URL}/login`, {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -44,7 +46,7 @@ export const signup = formData => {
         user: formData
     }
     return dispatch => {
-        return fetch('http://localhost:3001/api/v1/signup', {
+        return fetch(`${BASE_URL}/signup`, {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -70,7 +72,7 @@ export const logout = (history) => {
         dispatch(clearCurrentUser())
         dispatch(clearUserPosts())
         history.push('/')
-        return fetch('http://localhost:3001/api/v1/logout', {
+        return fetch(`${BASE_URL}/logout`, {
             credentials: 'include',
             method: 'DELETE'
         })
@@ -80,7 +82,7 @@ export const logout = (history) => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-        return fetch('http://localhost:3001/api/v1/get_current_user', {
+        return fetch(`${BASE_URL}/get_current_user`, {
             credentials: 'include',
             method: 'GET',
             headers: {
@@ -90,7 +92,7 @@ export const getCurrentUser = () => {
                     .then(res => res.json())
                     .then(user => {
                         if (user.error) {
-                            alert(user.error)
+                            console.log(user.error)
                         } else {
                             dispatch(setCurrentUser(user))
                             dispatch(getUserPosts(user.id))

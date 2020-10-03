@@ -1,4 +1,5 @@
-import { resetNewPostForm }from './newPostForm'
+import { resetNewPostForm } from './newPostForm'
+import { BASE_URL } from './currentUser'
 
 export const setUserPosts = posts => {
     return {
@@ -45,7 +46,7 @@ export const deletePostSignal = id => {
 
 export const getUserPosts = (id) => {
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/users/${id}/posts`, {
+        return fetch(`${BASE_URL}/users/${id}/posts`, {
             credentials: 'include',
             method: 'GET',
             headers: {
@@ -66,7 +67,7 @@ export const getUserPosts = (id) => {
 
 export const createNewPost = (formData, history) => {
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/posts`, {
+        return fetch(`${BASE_URL}/posts`, {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -90,7 +91,7 @@ export const createNewPost = (formData, history) => {
 
 export const deletePost = (postId, history) => {
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/posts/${postId}`, {
+        return fetch(`${BASE_URL}/posts/${postId}`, {
             credentials: "include",
             method: "DELETE",
             headers: {
@@ -119,7 +120,7 @@ export const createNewUserComment = (postId, commentorId, formData) => {
         body: formData
     }
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/posts/${postId}/comments`, {
+        return fetch(`${BASE_URL}/posts/${postId}/comments`, {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -146,7 +147,7 @@ export const createNewUserLike = (postId, likerId, history) => {
         liker_id: likerId
     }
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/posts/${postId}/likes`, {
+        return fetch(`${BASE_URL}/posts/${postId}/likes`, {
             credentials: 'include',
             method: 'POST',
             headers: {

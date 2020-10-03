@@ -1,3 +1,5 @@
+import { BASE_URL } from './currentUser'
+
 export const setUserFollowingsPosts = posts => {
     return {
         type: 'SET_USER_FOLLOWINGS_POST',
@@ -21,7 +23,7 @@ export const addNewComment = comment => {
 
 export const getUserFollowingsPosts = (id) => {
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/users/${id}/posts`, {
+        return fetch(`${BASE_URL}/users/${id}/posts`, {
             credentials: 'include',
             method: 'GET',
             headers: {
@@ -47,7 +49,7 @@ export const createNewLike = (postId, likerId, history) => {
         liker_id: likerId
     }
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/posts/${postId}/likes`, {
+        return fetch(`${BASE_URL}/posts/${postId}/likes`, {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -76,7 +78,7 @@ export const createNewComment = (postId, commentorId, formData) => {
         body: formData
     }
     return dispatch => {
-        return fetch(`http://localhost:3001/api/v1/posts/${postId}/comments`, {
+        return fetch(`${BASE_URL}/posts/${postId}/comments`, {
             credentials: 'include',
             method: 'POST',
             headers: {
