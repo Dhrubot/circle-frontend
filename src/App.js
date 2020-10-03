@@ -32,7 +32,7 @@ class App extends React.Component {
       <div>
           <NavBar />
           <Switch>
-            <Route exact path='/' render={(props) => loggedIn ? <Home {...props}/> : <Login />} />
+            <Route exact path='/circle-frontend' render={(props) => loggedIn ? <Home {...props}/> : <Login />} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={Signup} />
             <Route exact path='/profile' component={UserPosts} />

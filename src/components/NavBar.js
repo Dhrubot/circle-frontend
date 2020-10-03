@@ -12,11 +12,11 @@ const NavBar = (props) => {
     return (
       <div>
             <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light">
-            <Navbar.Brand href="/">Circle</Navbar.Brand>
+            <Navbar.Brand href="/circle-frontend">Circle</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link href='/circle-frontend'>Home</Nav.Link>
                 </Nav>
                     {props.loggedIn ?
                 <Nav>   
