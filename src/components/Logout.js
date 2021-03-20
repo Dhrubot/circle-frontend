@@ -11,7 +11,7 @@ const Logout = ({ logout, history }) => {
     }
     return (
 
-        <Button variant='danger' size='sm' onClick={ handleOnCLick }>
+        <Button variant='danger' className="logout-btn" size='sm' onClick={ handleOnCLick }>
             Logout
         </Button>
     )

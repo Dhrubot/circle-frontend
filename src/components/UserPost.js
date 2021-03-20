@@ -17,7 +17,7 @@ class UserPost extends React.Component {
         
         return (
 
-            <div key={p.id}>
+            <>
                 <div className="py-4"></div>
                 <Card>
                     <Card.Header>
@@ -55,7 +55,7 @@ class UserPost extends React.Component {
                     this.props.history.push('/profile')}}>
                     Delete Post
                 </Button>
-            </div>
+            </>
 
             
 

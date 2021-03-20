@@ -1,7 +1,8 @@
 import { resetSignupForm } from "./signupForm"
 import { getUserPosts, clearUserPosts } from './userPosts'
 
-export const BASE_URL = 'https://circle-dh.herokuapp.com/api/v1'
+// export const BASE_URL = 'https://circle-dh.herokuapp.com/api/v1'
+export const BASE_URL = 'http://127.0.0.1:3001/api/v1'
 
 
 export const setCurrentUser = user => {
@@ -34,7 +35,8 @@ export const login = (credentials, history) => {
                         } else {
                             dispatch(setCurrentUser(user))
                             dispatch(getUserPosts(user.id))
-                            history.push('/')
+                            console.log(history)
+                            history.push('/circle-frontend')
                         }
                     })
                     .catch(console.log)

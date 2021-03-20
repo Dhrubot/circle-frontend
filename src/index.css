@@ -44,7 +44,8 @@ body {
 }
 
 .login-button {
-    width: 100%
+    width: 100%;
+    margin-top: 60px;
 }
 
 .signup-form {
@@ -71,4 +72,43 @@ h6, span {
 
 .p-3 {
     padding: 2rem !important;
+}
+
+.dropdown-menu {
+    background-color: #101321 !important;
+}
+
+.dropdown-item {
+    color: #e4e7eb;
+}
+
+.dropdown-divider {
+    border-top-color: #1c395c;
+}
+
+.logout-btn {
+    background-color: transparent;
+}
+
+.card-header {
+    background-color: #50566b;
+    color: #e4e7eb;
+}
+
+.card-body {
+    background-color: #3c4257;
+    color: #e4e7eb;
+}
+
+.card-footer {
+    background-color: #50566b;
+    color: #e4e7eb;
+}
+
+.text-muted {
+    color:#8db1d2;
+}
+
+.card {
+    border: none;
 }
