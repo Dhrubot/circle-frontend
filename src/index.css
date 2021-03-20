@@ -27,7 +27,7 @@ body {
 }
 
 .form-label {
-    color: #007bff!important
+    color: #007bff!important;
 }
 
 .login-form-footer {
@@ -111,4 +111,16 @@ h6, span {
 
 .card {
     border: none;
+}
+
+.nav-dropdown {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .nav-dropdown {
+        display: flex;
+        justify-content: flex-end;
+    }
 }

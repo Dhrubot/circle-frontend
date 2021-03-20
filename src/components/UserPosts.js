@@ -24,14 +24,36 @@ const UserPosts = ( {userPosts, user, history} ) => {
             }
         )
         :
-        <Card>
-            <Card.Header>
-                <Card.Title>You haven't posted anything yet.</Card.Title>
-            </Card.Header>
-            <Card.Body>
-                Create you first post and share it with your circle.
-            </Card.Body>
-        </Card>
+        // <Card>
+        //     <Card.Header>
+        //         <Card.Title>You haven't posted anything yet.</Card.Title>
+        //     </Card.Header>
+        //     <Card.Body>
+        //         Create you first post and share it with your circle.
+        //     </Card.Body>
+        // </Card>
+
+        <Card style={{maxWidth: '500px'}}>
+        <Card.Header style={{padding: '20px'}}>
+            <Card.Title>
+                <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex justify-content-center align-items-center">
+                    <Image width="40" src="https://picsum.photos/50/50" roundedCircle />
+                        <span style={{padding: '10px'}}>Dhrubo</span>
+                    </div>
+                </div>
+            </Card.Title>
+        </Card.Header>
+        <Card.Body>
+            Create you first post and share it with your circle.
+        </Card.Body>
+        <Card.Img src="https://picsum.photos/200" style={{maxWidth: '500px'}} />
+        <Card.Body>
+            <Card.Link href="#">Card Link</Card.Link>
+            <Card.Link href="#">Another Link</Card.Link>
+         </Card.Body>
+    </Card>
+
 
     return (
         <Container>

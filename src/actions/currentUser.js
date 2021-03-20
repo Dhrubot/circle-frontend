@@ -35,7 +35,6 @@ export const login = (credentials, history) => {
                         } else {
                             dispatch(setCurrentUser(user))
                             dispatch(getUserPosts(user.id))
-                            console.log(history)
                             history.push('/circle-frontend')
                         }
                     })
@@ -73,6 +72,7 @@ export const logout = (history) => {
     return dispatch => {
         dispatch(clearCurrentUser())
         dispatch(clearUserPosts())
+        console.log(history)
         history.push('/')
         return fetch(`${BASE_URL}/logout`, {
             credentials: 'include',

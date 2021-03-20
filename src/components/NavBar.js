@@ -13,24 +13,23 @@ const NavBar = (props) => {
     return (
       <div>
             <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark">
-            <Navbar.Brand href="/">Circle</Navbar.Brand>
+            <Navbar.Brand as= { Link } to="/">Circle</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href='/'>Home</Nav.Link>
+                    <Nav.Link as={ Link } to='/'>Home</Nav.Link>
                 </Nav>
                     {props.loggedIn ?
                 <Nav>   
                         <Nav.Link as={ Link } to='/posts/new'>Create Post</Nav.Link>
-                        <NavDropdown 
+                        <NavDropdown
+                            className="nav-dropdown" 
                             title={
                                 <div className="pull-left">
                                     <Image width='25' src="https://picsum.photos/50/50" roundedCircle fluid />  
                                     {currentUsername}
                                 </div>
                             } 
-                            id="collasible-nav-dropdown" 
-                            alignRight
                         >
                             <NavDropdown.Item as={ Link } to='/posts/new'>Create Post</NavDropdown.Item>
                             <NavDropdown.Item as={ Link } to='/profile'>Profile</NavDropdown.Item>
