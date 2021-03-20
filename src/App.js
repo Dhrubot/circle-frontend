@@ -7,7 +7,7 @@ import { Route, Switch } from 'react-router-dom'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Home from './components/Home'
-import NewPostForm from './components/NewPostForm'
+import NewPostForm from './components/newPostForm'
 import UserPosts from './components/UserPosts';
 import UserPost from './components/UserPost';
 import UserFollowingPost from './components/UserFollowingPost';

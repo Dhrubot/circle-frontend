@@ -1,5 +1,5 @@
 body {
-    background: #ecf2f9;
+    background: #1a1f36;
 }
 
 .comment-list-group {
@@ -7,4 +7,68 @@ body {
     margin-bottom: 10px;
     overflow:scroll;
     -webkit-overflow-scrolling: touch;
+}
+
+/* .navbar-light .navbar-brand {
+    color: #e4e7eb;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #e4e7eb;
+}
+
+.navbar-toggler {
+    color: #e4e7eb;
+} */
+
+.bg-dark {
+    background-color: #101321 !important;
+    opacity: 0.8;
+}
+
+.form-label {
+    color: #007bff!important
+}
+
+.login-form-footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.login-form-footer p {
+    color: #e4e7eb;
+}
+
+.btn-primary {
+    background-color: transparent;
+}
+
+.login-button {
+    width: 100%
+}
+
+.signup-form {
+    background-color: #101321;
+    padding: 40px;
+    margin: 20px;
+}
+
+.signup-btn {
+    margin-top: 20px;
+}
+
+legend {
+    text-align: center;
+}
+
+h6, span {
+    color: #e4e7eb;
+}
+
+.login-row {
+    width: 100%;
+}
+
+.p-3 {
+    padding: 2rem !important;
 }

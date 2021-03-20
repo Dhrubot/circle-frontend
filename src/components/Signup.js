@@ -32,7 +32,7 @@ const Signup = ({ signupFormData, updateSignupForm, signup }) => {
                     <Col md={3}>
 
                     </Col>
-                    <Col md={6} className='float-right'>
+                    <Col md={6} className='float-right signup-form'>
                         <Form onSubmit={handleSubmit}>
                             <legend style={{ color: '#008ae6'}}>Sign Up</legend>
                             <hr></hr>
@@ -55,8 +55,8 @@ const Signup = ({ signupFormData, updateSignupForm, signup }) => {
                             </Form.Group>
                             <Row>
                                 <br></br>
-                                <span className="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
-                                <Button variant="success" className='btn-block signup-btn' type="submit">
+                                <span className="help-block">By signing up, you agree to the storing of cookies on your device, ensuring enhanced site expereince.</span>
+                                <Button variant="primary" className='btn-block signup-btn' type="submit">
                                     Sign up
                                 </Button>
                             </Row>
