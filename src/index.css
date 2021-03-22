@@ -1,5 +1,18 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
 body {
     background: #1a1f36;
+}
+
+.dropdown-menu.show a:hover {
+    background-color: #1c2348;
+    color: white;
 }
 
 .comment-list-group {
@@ -91,12 +104,12 @@ h6, span {
 }
 
 .card-header {
-    background-color: #50566b;
+    background-color: #3c4257;
     color: #e4e7eb;
 }
 
 .card-body {
-    background-color: #3c4257;
+    background-color: #1f243e;
     color: #e4e7eb;
 }
 
@@ -111,12 +124,63 @@ h6, span {
 
 .card {
     border: none;
+    background-color: #3c4257;
+    margin: 30px;
 }
 
 .nav-dropdown {
     display: flex;
     justify-content: center;
 }
+
+hr {
+    margin-bottom: 0;
+}
+
+.like-comment-button {
+    padding: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+input.form-control {
+    background-color: #1c2348;
+    border: none;
+}
+
+.form-control:not(active){
+    background-color: #1c2348;
+ }
+
+ .form-control:focus{
+    background-color: #1c2348;
+ }
+
+ textarea.form-control:focus {
+     background-color: #3c4257;
+     color: white;
+     border: none;
+ }
+
+ textarea.form-control:not(active) {
+    background-color: #3c4257;
+    color: white;
+    border: none;
+ }
+
+ .input-group-text {
+     background-color: transparent;
+     border: none;
+ }
+
+
+ /* input:-internal-autofill-selected {
+    background-color: #1c2348;
+ } */
+
+ .list-group-item {
+     background-color: #3c4257;
+ }
 
 @media (max-width: 600px) {
     .nav-dropdown {
