@@ -19,7 +19,7 @@ const CommentForm = ({ post, commentorId, createNewComment, createNewUserComment
         <Form>
             <Form.Row className="align-items-center">
                 <InputGroup>
-                <Form.Control value={comment} as="textarea" placeholder="Add a comment..." onChange={e => setComment(e.target.value)}/>
+                <Form.Control value={comment} placeholder="Add a comment..." onChange={e => setComment(e.target.value)} className="comment-input"/>
                     <InputGroup.Prepend>
                         <InputGroup.Text>
                             <Button size='sm' type="submit" onClick={handleSubmit}>

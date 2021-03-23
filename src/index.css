@@ -39,9 +39,10 @@ body {
     opacity: 0.8;
 }
 
-.form-label {
-    color: #007bff!important;
-}
+/* .text-primary {
+    color: #5162a5 !important;
+} */
+
 
 .login-form-footer {
     margin-top: 50px;
@@ -180,6 +181,26 @@ input.form-control {
 
  .list-group-item {
      background-color: #3c4257;
+ }
+
+.form-label {
+    color: #a6afd2 !important;
+ }
+
+ .comment-input {
+    border: 1px solid none !important;
+    border-radius: 40px !important;
+    background-color: #3c4257 !important;
+    color: white !important;
+    padding-left: 20px;
+ }
+
+ .like-icon {
+     padding-right: 5px;
+ }
+
+ .comment-icon {
+     padding-right: 5px;
  }
 
 @media (max-width: 600px) {
