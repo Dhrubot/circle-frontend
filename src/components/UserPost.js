@@ -11,6 +11,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 const UserPost = (props) => {
   const p = props.post;
+  console.log(props);
   const author =
     p.author.username[0].toUpperCase() + p.author.username.slice(1);
   const liker =
@@ -98,7 +99,7 @@ const UserPost = (props) => {
           </div>
           <NavDropdown.Divider />
           <Accordion.Collapse eventKey="1">
-            <div class="post-comment-list">
+            <div className="post-comment-list">
               <CommentList post={p} />
             </div>
           </Accordion.Collapse>

@@ -27,7 +27,7 @@ const NavBar = (props) => {
                             title={
                                 <div className="pull-left">
                                     <Image width='25' src="https://picsum.photos/50/50" roundedCircle fluid />  
-                                    {currentUsername}
+                                    <span className="nav-username">{currentUsername}</span>
                                 </div>
                             } 
                         >

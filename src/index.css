@@ -20,6 +20,7 @@ body {
     margin-bottom: 10px;
     overflow:scroll;
     -webkit-overflow-scrolling: touch;
+    border-radius: 2%;
 }
 
 /* .navbar-light .navbar-brand {
@@ -180,7 +181,7 @@ input.form-control {
  } */
 
  .list-group-item {
-     background-color: #3c4257;
+     background-color: #1a1f36;
  }
 
 .form-label {
@@ -188,11 +189,15 @@ input.form-control {
  }
 
  .comment-input {
-    border: 1px solid none !important;
+    border: 1px solid #1a1f36 !important;
     border-radius: 40px !important;
     background-color: #3c4257 !important;
     color: white !important;
     padding-left: 20px;
+ }
+
+ .commentor {
+     padding-left: 1rem;
  }
 
  .like-icon {
@@ -201,6 +206,15 @@ input.form-control {
 
  .comment-icon {
      padding-right: 5px;
+ }
+
+ .jumbotron {
+     background-color: #3c4257;
+     color: whitesmoke
+ }
+
+ .nav-username {
+     padding-left: 0.5rem;
  }
 
 @media (max-width: 600px) {

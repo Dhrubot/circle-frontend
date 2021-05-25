@@ -13,11 +13,11 @@ const CommentList = ({ post }) => {
             <div key={comment.id}>
               <ListGroup.Item>
                 <Image
-                  width="50"
+                  width="30"
                   src="https://picsum.photos/50/50"
                   roundedCircle
                 />
-                <strong>
+                <strong className="commentor">
                   {comment.commentor.username[0].toUpperCase() +
                     comment.commentor.username.slice(1)}{" "}
                 </strong>{" "}
