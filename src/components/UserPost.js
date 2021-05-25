@@ -11,7 +11,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 const UserPost = (props) => {
   const p = props.post;
-  console.log(props);
   const author =
     p.author.username[0].toUpperCase() + p.author.username.slice(1);
   const liker =
@@ -65,6 +64,11 @@ const UserPost = (props) => {
                   >
                     {p.comments.length} Comments
                   </Accordion.Toggle>
+                  <Accordion.Collapse eventKey="1">
+            <div className="post-comment-list">
+              <CommentList post={p} />
+            </div>
+          </Accordion.Collapse>
                 </div>
               </div>
               <NavDropdown.Divider />
@@ -77,10 +81,10 @@ const UserPost = (props) => {
                 size="sm"
                 className="pull-right text-muted like-btn"
                 onClick={() => {
-                  this.props.createNewUserLike(
+                  props.createNewUserLike(
                     p.id,
                     p.author.id,
-                    this.props.history
+                    props.history
                   );
                 }}
               >

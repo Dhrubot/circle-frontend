@@ -71,7 +71,6 @@ export const createNewLike = (postId, likerId, history) => {
 }
 
 export const createNewComment = (postId, commentorId, formData) => {
-    console.log('from followings posts comment action')
     const commentData = {
         post_id: postId,
         commentor_id: commentorId,
